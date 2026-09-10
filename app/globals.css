@@ -1,0 +1,104 @@
+@import "tailwindcss";
+
+:root {
+  --mqf-cream: #f7f4ec;
+  --mqf-ink: #14351f;
+  --mqf-green: #2c6e49;
+  --mqf-green-dark: #14351f;
+  --mqf-yellow: #f5c63c;
+  --mqf-card: #fffdf8;
+
+  --mqf-text-muted: #4a5a4c;
+  --mqf-text-soft: #6b7a6d;
+  --mqf-text-softer: #8a9a8c;
+  --mqf-text-label: #3c4c3e;
+
+  --mqf-border: #e3dccb;
+  --mqf-border-card: #e8e1d0;
+  --mqf-border-input: #d6cfbd;
+  --mqf-border-slot: #dcd4c1;
+  --mqf-border-btn: #c9c1ae;
+
+  --mqf-panel: #f4f1e6;
+  --mqf-panel-2: #f0ede2;
+  --mqf-icon-bg: #eaf2e4;
+
+  --mqf-warn-bg: #fff8e1;
+  --mqf-warn-border: #f0dfa6;
+  --mqf-warn-text: #43502f;
+  --mqf-warn-text-strong: #8a6a15;
+
+  --mqf-error-bg: #fbeae6;
+  --mqf-error-border: #e9c3b8;
+  --mqf-error-border-soft: #e3d3cc;
+  --mqf-error-text: #8a3a22;
+}
+
+@theme inline {
+  --color-mqf-cream: var(--mqf-cream);
+  --color-mqf-ink: var(--mqf-ink);
+  --color-mqf-green: var(--mqf-green);
+  --color-mqf-green-dark: var(--mqf-green-dark);
+  --color-mqf-yellow: var(--mqf-yellow);
+  --color-mqf-card: var(--mqf-card);
+
+  --color-mqf-text-muted: var(--mqf-text-muted);
+  --color-mqf-text-soft: var(--mqf-text-soft);
+  --color-mqf-text-softer: var(--mqf-text-softer);
+  --color-mqf-text-label: var(--mqf-text-label);
+
+  --color-mqf-border: var(--mqf-border);
+  --color-mqf-border-card: var(--mqf-border-card);
+  --color-mqf-border-input: var(--mqf-border-input);
+  --color-mqf-border-slot: var(--mqf-border-slot);
+  --color-mqf-border-btn: var(--mqf-border-btn);
+
+  --color-mqf-panel: var(--mqf-panel);
+  --color-mqf-panel-2: var(--mqf-panel-2);
+  --color-mqf-icon-bg: var(--mqf-icon-bg);
+
+  --color-mqf-warn-bg: var(--mqf-warn-bg);
+  --color-mqf-warn-border: var(--mqf-warn-border);
+  --color-mqf-warn-text: var(--mqf-warn-text);
+  --color-mqf-warn-text-strong: var(--mqf-warn-text-strong);
+
+  --color-mqf-error-bg: var(--mqf-error-bg);
+  --color-mqf-error-border: var(--mqf-error-border);
+  --color-mqf-error-border-soft: var(--mqf-error-border-soft);
+  --color-mqf-error-text: var(--mqf-error-text);
+
+  --font-display: var(--font-newsreader), Georgia, serif;
+  --font-sans: var(--font-manrope), system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: var(--mqf-cream);
+  color: var(--mqf-ink);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+}
+
+@keyframes mqfIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+.mqf-fade-in {
+  animation: mqfIn 0.4s ease both;
+}
+
+@media print {
+  .mqf-noprint {
+    display: none !important;
+  }
+}
