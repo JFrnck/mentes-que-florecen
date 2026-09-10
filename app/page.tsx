@@ -128,7 +128,7 @@ export default async function HomePage() {
               La campaña atiende de <strong>14 a 29 años</strong>. Los adolescentes de 14 a 17
               años pueden reservar, pero el día de la cita deben presentar:
             </p>
-            <ul className="mt-3 grid gap-1.5 pl-5">
+            <ul className="mt-3 grid list-disc gap-1.5 pl-5 marker:text-mqf-warn-text-strong">
               <li>Autorización firmada por el padre, madre o tutor legal.</li>
               <li>Copia del documento de identidad de quien autoriza.</li>
               <li>De preferencia, venir acompañado por esa persona.</li>
