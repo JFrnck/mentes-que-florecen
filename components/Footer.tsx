@@ -21,6 +21,13 @@ export function Footer() {
             className="h-10 w-auto object-contain"
           />
           <Image
+            src="/brand/logo-consultoria-murillo.png"
+            alt="Consultoría Murillo"
+            width={1254}
+            height={1254}
+            className="h-14 w-auto object-contain"
+          />
+          <Image
             src="/brand/arequipa-somos-todos.png"
             alt="Arequipa Somos Todos"
             width={120}
