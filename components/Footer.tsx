@@ -14,11 +14,11 @@ export function Footer() {
         </div>
         <div className="flex flex-wrap items-center gap-5">
           <Image
-            src="/brand/logo-residuos-que-educan.jpg"
+            src="/brand/logo-residuos-que-educan.png"
             alt="Residuos que Educan"
-            width={120}
-            height={40}
-            className="h-10 w-auto object-contain mix-blend-multiply"
+            width={140}
+            height={79}
+            className="h-10 w-auto object-contain"
           />
           <Image
             src="/brand/arequipa-somos-todos.png"
@@ -27,6 +27,26 @@ export function Footer() {
             height={34}
             className="h-[34px] w-auto object-contain mix-blend-multiply"
           />
+        </div>
+        <div className="text-[13px] leading-relaxed text-mqf-text-soft">
+          <div>
+            <strong className="text-mqf-ink">Contacto</strong>
+          </div>
+          <div>
+            <a href={`mailto:${SITE.contactEmail}`} className="hover:text-mqf-green">
+              {SITE.contactEmail}
+            </a>
+          </div>
+          <div>
+            <a
+              href={`https://${SITE.website}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-mqf-green"
+            >
+              {SITE.website}
+            </a>
+          </div>
         </div>
         <div className="text-[13px] leading-relaxed text-mqf-text-soft">
           <div>

@@ -364,10 +364,11 @@ export function BookingWizard({ slots }: { slots: SlotRow[] }) {
             con tu documento de identidad.
           </p>
 
-          <div className="mt-6 grid grid-cols-1 gap-3.5 sm:grid-cols-3">
+          <div className="mt-6 grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
             <SummaryCard label="Hora" value={formatSlotTime(confirmation.startsAt)} />
             <SummaryCard label="Fecha" value={SITE.eventDate} />
             <SummaryCard label="Código" value={confirmation.code} />
+            <SummaryCard label="Lugar" value={SITE.venue} link={SITE.mapsUrl} />
           </div>
 
           {confirmation.age < 18 && (
@@ -412,11 +413,21 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   );
 }
 
-function SummaryCard({ label, value }: { label: string; value: string }) {
+function SummaryCard({ label, value, link }: { label: string; value: string; link?: string }) {
   return (
     <div className="rounded-2xl bg-mqf-panel p-4.5">
       <div className="text-[11px] uppercase tracking-[0.12em] text-mqf-text-softer">{label}</div>
-      <div className="mt-1.5 font-display text-xl">{value}</div>
+      <div className="mt-1.5 font-display text-xl leading-tight">{value}</div>
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-1.5 inline-block text-sm font-semibold text-mqf-green hover:text-mqf-ink"
+        >
+          Cómo llegar →
+        </a>
+      )}
     </div>
   );
 }

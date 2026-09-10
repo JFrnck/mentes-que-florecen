@@ -64,7 +64,7 @@ export default async function HomePage() {
         <div className="grid grid-cols-1 gap-3.5 sm:grid-cols-2 lg:grid-cols-4">
           <InfoCard label="Fecha" value={SITE.eventDate} />
           <InfoCard label="Horario" value="9:00 a 17:00" />
-          <InfoCard label="Lugar" value={SITE.venue} />
+          <InfoCard label="Lugar" value={SITE.venue} link={SITE.mapsUrl} />
           <div className="rounded-[18px] border border-mqf-ink bg-mqf-ink p-[22px] text-[#F2EFE4]">
             <div className="text-[11px] uppercase tracking-[0.12em] text-[#A8BCA9]">Costo</div>
             <div className="mt-2 font-display text-[22px] leading-tight">Totalmente gratuito</div>
@@ -152,11 +152,21 @@ export default async function HomePage() {
   );
 }
 
-function InfoCard({ label, value }: { label: string; value: string }) {
+function InfoCard({ label, value, link }: { label: string; value: string; link?: string }) {
   return (
     <div className="rounded-[18px] border border-mqf-border-card bg-mqf-card p-[22px]">
       <div className="text-[11px] uppercase tracking-[0.12em] text-mqf-text-softer">{label}</div>
       <div className="mt-2 font-display text-[22px] leading-tight">{value}</div>
+      {link && (
+        <a
+          href={link}
+          target="_blank"
+          rel="noopener noreferrer"
+          className="mt-2 inline-block text-sm font-semibold text-mqf-green hover:text-mqf-ink"
+        >
+          Cómo llegar →
+        </a>
+      )}
     </div>
   );
 }

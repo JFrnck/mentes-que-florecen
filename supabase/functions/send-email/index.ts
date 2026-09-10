@@ -12,7 +12,8 @@ import { createClient } from "jsr:@supabase/supabase-js@2";
 const BREVO_API_KEY = Deno.env.get("BREVO_API_KEY")!;
 const FROM_EMAIL = Deno.env.get("MAIL_FROM_EMAIL") ?? "hola@mentesqueflorecen.pe";
 const FROM_NAME = "Mentes que Florecen";
-const VENUE = Deno.env.get("EVENT_VENUE") ?? "Sede por confirmar, Arequipa";
+const VENUE = Deno.env.get("EVENT_VENUE") ?? "Municipalidad Provincial de Arequipa";
+const MAPS_URL = Deno.env.get("EVENT_MAPS_URL") ?? "https://maps.app.goo.gl/HxwwNPUnCyoZ6MTb9";
 const TIMEZONE = "America/Lima";
 
 type Kind = "confirmation" | "reminder_24h" | "reminder_1h";
@@ -71,7 +72,7 @@ function confirmationEmail(b: BookingRow) {
     subject: `Tu cita está confirmada — ${formatTime(b.starts_at)}, ${formatDate(b.starts_at)}`,
     html: wrapEmail(
       `Tu cita está reservada, ${b.full_name.split(" ")[0]}`,
-      `<p style="font-size:15px; line-height:1.6; color:#4A5A4C;">Te esperamos el <strong>${formatDate(b.starts_at)}</strong> a las <strong>${formatTime(b.starts_at)}</strong> en ${VENUE}. Llega 10 minutos antes con tu documento de identidad.</p>
+      `<p style="font-size:15px; line-height:1.6; color:#4A5A4C;">Te esperamos el <strong>${formatDate(b.starts_at)}</strong> a las <strong>${formatTime(b.starts_at)}</strong> en ${VENUE} (<a href="${MAPS_URL}" style="color:#2C6E49;">cómo llegar</a>). Llega 10 minutos antes con tu documento de identidad.</p>
        <div style="background:#F4F1E6; border-radius:14px; padding:16px 18px; margin:16px 0;">
          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#8A9A8C;">Código de reserva</div>
          <div style="font-family:Georgia, serif; font-size:22px; color:#14351F;">${b.booking_code}</div>
@@ -88,7 +89,7 @@ function reminderEmail(b: BookingRow, kind: "reminder_24h" | "reminder_1h") {
     subject: `Recordatorio: tu cita es ${when} a las ${formatTime(b.starts_at)}`,
     html: wrapEmail(
       `Nos vemos ${when}, ${b.full_name.split(" ")[0]}`,
-      `<p style="font-size:15px; line-height:1.6; color:#4A5A4C;">Tu cita de screening es el <strong>${formatDate(b.starts_at)}</strong> a las <strong>${formatTime(b.starts_at)}</strong> en ${VENUE}. Llega 10 minutos antes con tu documento de identidad.</p>
+      `<p style="font-size:15px; line-height:1.6; color:#4A5A4C;">Tu cita de screening es el <strong>${formatDate(b.starts_at)}</strong> a las <strong>${formatTime(b.starts_at)}</strong> en ${VENUE} (<a href="${MAPS_URL}" style="color:#2C6E49;">cómo llegar</a>). Llega 10 minutos antes con tu documento de identidad.</p>
        <div style="background:#F4F1E6; border-radius:14px; padding:16px 18px; margin:16px 0;">
          <div style="font-size:11px; text-transform:uppercase; letter-spacing:0.08em; color:#8A9A8C;">Código de reserva</div>
          <div style="font-family:Georgia, serif; font-size:22px; color:#14351F;">${b.booking_code}</div>

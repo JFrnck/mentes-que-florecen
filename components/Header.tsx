@@ -12,15 +12,15 @@ export function Header() {
   return (
     <header className="mqf-noprint sticky top-0 z-40 border-b border-mqf-border bg-mqf-cream/90 backdrop-blur">
       <div className="mx-auto flex max-w-[1140px] flex-wrap items-center gap-4 px-5 py-3">
-        <Link href="/" className="mr-auto flex items-center gap-2.5">
+        <Link href="/" className="mr-auto flex items-center gap-3.5">
           <Image
-            src="/brand/logo-residuos-que-educan.jpg"
+            src="/brand/logo-residuos-que-educan.png"
             alt="Residuos que Educan"
-            width={44}
-            height={44}
-            className="h-11 w-11 rounded-full object-contain"
+            width={140}
+            height={79}
+            className="h-14 w-auto object-contain"
           />
-          <span className="leading-tight">
+          <span className="hidden leading-tight sm:block">
             <span className="block font-display text-lg text-mqf-ink">{SITE.name}</span>
             <span className="block text-[11px] uppercase tracking-widest text-mqf-text-soft">
               {SITE.tagline}

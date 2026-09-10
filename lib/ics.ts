@@ -29,7 +29,8 @@ export function downloadBookingIcs(opts: { code: string; startsAt: string }) {
     `DTEND;TZID=${SITE.timezone}:${icsStamp(end, SITE.timezone)}`,
     "SUMMARY:Screening de salud mental — Mentes que Florecen",
     `LOCATION:${SITE.venue}`,
-    `DESCRIPTION:Código ${opts.code}. Llega 10 minutos antes con tu documento de identidad.`,
+    `DESCRIPTION:Código ${opts.code}. Llega 10 minutos antes con tu documento de identidad. Cómo llegar: ${SITE.mapsUrl}`,
+    `URL:${SITE.mapsUrl}`,
     "END:VEVENT",
     "END:VCALENDAR",
   ].join("\r\n");
