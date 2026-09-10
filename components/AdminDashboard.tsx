@@ -8,7 +8,7 @@ import {
   adminSetAttended,
   type AdminBookingRow,
   type AdminSlotSummary,
-} from "@/app/admin/actions";
+} from "@/app/staff/actions";
 import { formatSlotTime } from "@/lib/format";
 import { SITE } from "@/lib/site";
 
@@ -74,7 +74,7 @@ export function AdminDashboard({
         </div>
         <div className="mqf-noprint flex flex-wrap gap-2.5">
           <a
-            href="/admin/export"
+            href="/staff/export"
             className="rounded-full bg-mqf-ink px-5 py-3 text-sm font-semibold text-[#FFFDF8] hover:bg-mqf-green"
           >
             Descargar CSV

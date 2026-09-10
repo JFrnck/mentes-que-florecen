@@ -14,11 +14,11 @@ export function Header() {
       <div className="mx-auto flex max-w-[1140px] flex-wrap items-center gap-4 px-5 py-3">
         <Link href="/" className="mr-auto flex items-center gap-2.5">
           <Image
-            src="/brand/logo-mentes-que-florecen.png"
-            alt="Mentes que Florecen"
+            src="/brand/logo-residuos-que-educan.jpg"
+            alt="Residuos que Educan"
             width={44}
             height={44}
-            className="h-11 w-11 object-contain"
+            className="h-11 w-11 rounded-full object-contain"
           />
           <span className="leading-tight">
             <span className="block font-display text-lg text-mqf-ink">{SITE.name}</span>
@@ -37,12 +37,6 @@ export function Header() {
               {link.label}
             </Link>
           ))}
-          <Link
-            href="/admin"
-            className="rounded-full border border-mqf-border-btn px-3 py-2 text-[13px] font-medium text-mqf-text-soft transition-colors hover:border-mqf-green hover:text-mqf-green"
-          >
-            Administración
-          </Link>
           <Link
             href="/reservar"
             className="rounded-full bg-mqf-green px-[18px] py-2.5 text-sm font-semibold text-[#FFFDF8] transition-colors hover:bg-mqf-ink"

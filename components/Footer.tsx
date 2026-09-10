@@ -8,8 +8,8 @@ export function Footer() {
         <div>
           <div className="font-display text-lg text-mqf-ink">{SITE.name}</div>
           <p className="mt-2 max-w-[34ch] text-[13px] leading-relaxed text-mqf-text-soft">
-            Una iniciativa de Residuos que Educan, con el apoyo de Arequipa Somos Todos y
-            Consultoría Murillo.
+            Una colaboración entre Residuos que Educan y Consultoría Murillo, con el apoyo de
+            Arequipa Somos Todos.
           </p>
         </div>
         <div className="flex flex-wrap items-center gap-5">
