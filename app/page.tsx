@@ -72,6 +72,20 @@ export default async function HomePage() {
         </div>
       </section>
 
+      <section className="mx-auto max-w-[1140px] px-5 pt-6">
+        <div className="overflow-hidden rounded-[18px] border border-mqf-border-card bg-mqf-card">
+          <iframe
+            src={SITE.mapsEmbedUrl}
+            title={`Mapa: ${SITE.venue}`}
+            width="100%"
+            height="320"
+            style={{ border: 0, display: "block" }}
+            loading="lazy"
+            referrerPolicy="no-referrer-when-downgrade"
+          />
+        </div>
+      </section>
+
       <section className="mx-auto max-w-[1140px] px-5 pt-[clamp(36px,7vw,72px)]">
         <h2 className="font-display text-[clamp(26px,4vw,38px)] font-normal tracking-[-0.01em]">
           Cómo funciona

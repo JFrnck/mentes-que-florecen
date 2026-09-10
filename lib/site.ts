@@ -4,6 +4,7 @@ export const SITE = {
   eventDate: "Sábado 19 de septiembre, 2026",
   venue: "Municipalidad Provincial de Arequipa",
   mapsUrl: "https://maps.app.goo.gl/HxwwNPUnCyoZ6MTb9",
+  mapsEmbedUrl: "https://www.google.com/maps?q=-16.3994657,-71.5368586&z=17&output=embed",
   timezone: "America/Lima",
   capacityPerSlot: 10,
   minAge: 14,
