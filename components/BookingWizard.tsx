@@ -371,6 +371,12 @@ export function BookingWizard({ slots }: { slots: SlotRow[] }) {
             <SummaryCard label="Lugar" value={SITE.venue} link={SITE.mapsUrl} />
           </div>
 
+          <div className="mt-4.5 rounded-2xl border border-mqf-warn-border bg-mqf-warn-bg px-5 py-4.5 text-sm leading-relaxed text-mqf-warn-text">
+            <strong>Guarda este código: {confirmation.code}.</strong> Te servirá para ver tu cita
+            y/o cancelarla desde &quot;Mi cita&quot;, incluso si en ese momento no tienes a la mano
+            el correo con la confirmación.
+          </div>
+
           {confirmation.age < 18 && (
             <div className="mt-4.5 rounded-2xl border border-mqf-warn-border bg-mqf-warn-bg px-5 py-4.5 text-sm leading-relaxed text-mqf-warn-text">
               <strong>Recuerda:</strong> como eres menor de 18 años, debes traer la autorización
